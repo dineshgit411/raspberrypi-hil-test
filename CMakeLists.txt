@@ -4,4 +4,4 @@ project(hil-test)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(hil-test example.cpp)
+add_executable(hil-test tests/example.cpp)
