@@ -1,0 +1,28 @@
+name: HIL Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-hil-test:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Setup CMake
+      run: sudo apt-get install -y cmake
+
+    - name: Build project
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make
+
+    - name: Run HIL test
+      run: |
+        ./build/hil-test
