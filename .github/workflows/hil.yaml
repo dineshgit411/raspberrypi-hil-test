@@ -2,8 +2,7 @@ name: HIL Test Workflow
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 jobs:
   run-hil-test:
@@ -13,16 +12,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     
-    - name: Setup CMake
-      run:  cmake --version
+    - name: Build Docker image
+      run: docker build -t hil-image .
 
-    - name: Build project
-      run: |
-        mkdir build
-        cd build
-        cmake ..
-        make
-
-    - name: Run HIL test
-      run: |
-        ./build/hil-test
+    - name: Run HIL test inside docker
+      run: docker run --rm hil-image
