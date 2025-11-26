@@ -1,6 +1,8 @@
 FROM ubuntu:25.10
 
-RUN apt install cmake build-essential
+RUN apt-get update && apt-get install -y \
+    cmake \
+    build-essential
 WORKDIR /app
 COPY . .
 
