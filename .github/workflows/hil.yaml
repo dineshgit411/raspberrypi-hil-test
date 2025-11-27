@@ -5,15 +5,8 @@ on:
     branches: ["main"]
 
 jobs:
-  run-hil-test:
-    runs-on: self-hosted
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    
-    - name: Build Docker image
-      run: docker build -t hil-image .
-
-    - name: Run HIL test inside docker
-      run: docker run --rm hil-image
+  maker-devops:
+    uses: dineshgit411/maker-devops/.github/workflows/hil_checks.yml@main
+    with:
+      project-yaml: config/project.yml
+      user-yaml: config/user.yml
