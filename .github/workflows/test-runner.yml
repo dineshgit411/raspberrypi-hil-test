@@ -1,0 +1,15 @@
+name: Test Self-Hosted Runner
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on:
+      - self-hosted
+      - X64
+      - Linux
+
+    steps:
+      - name: Test Runner
+        run: echo "Self-hosted runner is working!"
