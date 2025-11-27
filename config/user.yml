@@ -1,6 +1,6 @@
-checks:
-  - {
-      name: CompileHelloWorld,
-      description: Compile the HelloWorld example,
-      command: "make all"
-    }
+# checks:
+#   - {
+#       name: CompileHelloWorld,
+#       description: Compile the HelloWorld example,
+#       command: "make all"
+#     }

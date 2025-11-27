@@ -7,6 +7,6 @@ on:
 jobs:
   maker-devops:
     uses: dineshgit411/makers-devops/.github/workflows/hil_checks.yml@main
-    # with:
-    #   project-yaml: config/project.yml
-    #   user-yaml: config/user.yml
+    with:
+      project-yaml: config/project.yml
+      user-yaml: config/user.yml
