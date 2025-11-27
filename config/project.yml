@@ -1,0 +1,6 @@
+project:
+  name: makers-docker-example
+  description: A simple example project using makers-docker and makers-devops
+  build:
+    type: make
+    target: all
