@@ -1,6 +1,8 @@
-# checks:
-#   - {
-#       name: CompileHelloWorld,
-#       description: Compile the HelloWorld example,
-#       command: "make all"
-#     }
+checks:
+  - name: "Run Hardware Test"
+    description: "Executes the compiled"
+
+    action: "run"
+    run_config:
+      executable: "hil-test"
+      expected_return_code: 0

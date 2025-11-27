@@ -1,6 +1,10 @@
-# project:
-#   name: makers-docker-example
-#   description: A simple example project using makers-docker and makers-devops
-#   build:
-#     type: make
-#     target: all
+project:
+  name: "Raspberry Pi HIL test"
+  description: "Configuratoni for cmake"
+
+build:
+  system: "cmake"
+  source_dir: "."
+  target_name: "hil-test"
+
+  build_type: "Debug"
